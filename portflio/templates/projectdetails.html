@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+ 
+{% block 'content' %}
+<div class="breadcum">
+  <h3 class="fb f-52 mb-3 white"> Project Details</h3>
+  <ul class="d-flex justify-content-center gap-3">
+    <li><a href="/">Home</a></li>
+    <li class="white">/</li>
+    <li class="orange">Project Details Us</li>
+  
+  </ul>
+</div>
+</header>
+
+
+
+
+<!-- blog start -->
+<section class="ptb-110 m-17 offwhite_bg">
+  <div class="container">
+      <div class="row">
+        
+        {% for data in projectdetails %}
+          <div class="col-xl-4 col-lg-4 col-md-6 col-12 mb-3 mb-lg-4">
+             
+                  <div class="blog_single shadow p-4 rounded-3">
+                    
+                      <div class="blog_img img position-relative my-3 rounded-4">
+                          <img src="{{data.project_image}}" class="w-100" alt="image">
+                          <span class="position-absolute orange_bg center dark"><i
+                                  class="fa-solid fa-arrow-up-long"></i></span>
+                      </div>
+                   
+                      <h4 class="fb position-relative dark"><span>{{data.post_title}}</span></h4>
+                      <p >{{data.description}}</p>
+                  </div>
+              
+          </div>
+          {% endfor %}
+      </div>
+      
+  </div>
+</section>
+<!-- blog end -->
+{% endblock 'content' %}

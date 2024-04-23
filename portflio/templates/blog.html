@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+ 
+{% block 'content' %}
+<div class="breadcum">
+  <h3 class="fb f-52 mb-3 white"> Portfolio Details</h3>
+  <ul class="d-flex justify-content-center gap-3">
+    <li><a href="/">Home</a></li>
+    <li class="white">/</li>
+    <li class="orange">Portfolio Details </li>
+  
+  </ul>
+</div>
+</header>
+
+
+
+
+ <!-- blog start -->
+ <section class="ptb-110 m-17 offwhite_bg">
+  <div class="container">
+      <div class="row">
+        
+        {% for d_data in myProjectDetail %}
+          <div class="col-xl-4 col-lg-4 col-md-6 col-12 mb-3 mb-lg-4">
+              <a href="blog-single.html">
+                  <div class="blog_single shadow p-4 rounded-3">
+                    
+                      <div class="blog_img img position-relative my-3 rounded-4">
+                          <img src="{{d_data.project_image}}" alt="" class="w-100">
+                          <span class="position-absolute orange_bg center dark"><i
+                                  class="fa-solid fa-arrow-up-long"></i></span>
+                      </div>
+                   
+                      <h4 class="fb position-relative dark"><span>{{d_data.title}}</span></h4>
+                      <p >{{d_data.paragrah_text}}</p>
+                  </div>
+              </a>
+          </div>
+          {% endfor %}
+      </div>
+      
+  </div>
+</section>
+<!-- blog end -->
+
+
+
+
+<!-- get in touch -->
+{% endblock 'content' %}

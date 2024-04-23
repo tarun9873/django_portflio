@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{logoimg.title}}</title>
+
+    <!--Essential css files-->
+    <link rel="stylesheet" href="../static/assets/css/all.css">
+    <link rel="stylesheet" href="../static/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/assets/css/slick.css">
+    <link rel="stylesheet" href="../static/assets/css/jquery-ui.css">
+    <link rel="stylesheet" href="../static/assets/css/nice-select.css">
+    <link rel="stylesheet" href="../static/assets/css/animate.css">
+    <link rel="stylesheet" href="../static/assets/css/fancybox.css">
+    <link rel="stylesheet" href="../static/assets/css/style.css">
+
+    <!--favicon-->
+    <link rel="icon" href="{{logoimg.toplogo}}">
+
+</head>
+
+<body>
+
+    <!--preloader start-->
+    <!-- <div class="preloader">
+        <div id="bars6">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div> -->
+    <!--preloader end-->
+
+
+    <!-- header start -->
+    <header class="dark_bg m-17 px-4 pt-xl-0 pt-3 ">
+        <div class="header_top py-3 d-none d-xl-block">
+            <div class="container-fluid ps-xxl-0 pe-xxl-0">
+                <div class="row align-items-center">
+                    <div class="col-xxl-5 col-xl-12">
+                        <ul class="d-flex gap-3">
+                            
+                            
+                            <li><a href="mailto:ak34400@gmail.com">
+                                    <p class="white d-inline-block">Gmail :- ak3400988@gmail.com</p>
+                                </a></li>
+                        </ul>
+                    </div>
+                    <div class="col-xxl-3 d-none d-xxl-block">
+                        <p class="white text-center">Creativity meets functionality.</p>
+                    </div>
+                    <div class="col-xxl-4 col-xl-6">
+                        <div class="ht_follow d-flex align-items-center justify-content-end">
+                            <!-- <p class="d-inline-block white">Follow Me</p> -->
+                            
+                            <ul class="ht_social d-flex flex-wrap gap-2">
+                                
+                                <li><a href= "javascript:void(0)" ><i class="fa-brands fa-twitter"></i></a></li>
+                                <li><a href= "javascript:void(0)" ><i class="fa-brands fa-instagram"></i></a></li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="header_bottom ">
+            <div class="container-fluid white_bg rounded-3 py-xl-0 py-3 ">
+                <div class="row align-items-center">
+                    <div class="col-xxl-2 col-xl-2 col-lg-5 col-sm-6 col-8">
+                        <div class="logo">
+                            <a href=""><img src="{{logoimg.logo.url}}" alt="img"></a>
+                        </div>
+                    </div>
+                    <div class="col-xxl-7 col-xl-7 d-none d-xl-block">
+                        <nav class="main_menu h-100">
+                            <ul class="h-100">
+                                <li ><a href="/">Home</a>
+                                </li>
+                                <li class="position-relative"><a href="/about-us">About </a>
+                          
+                      </li>
+
+                                <li class="position-relative"><a href="/crud-operations">crud operations </a>
+                                   
+                                </li>
+                              
+                                <li class="position-relative"><a href="/blog">Blog </a>
+                                    
+                                </li>
+                                
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-xxl-3 col-xl-3 d-none d-xl-block ">
+                        <div class="header_contact  d-flex align-items-center justify-content-end gap-3">
+                            <a href="/contact" class="default-btn">Contact<i class="fa-solid fa-arrow-up-long"></i>
+                                <span></span>
+                            </a>
+                            <a class="btn header_toggle_btn" data-bs-toggle="offcanvas" href="#offcanvasRight"
+                                role="button" aria-controls="offcanvasRight">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </a>
+                        
+
+                        </div>
+                    </div>
+
+                    <div class="col-xl-8 col-lg-7 col-sm-6 col-4 d-block d-xl-none">
+                        <div class="mobile_menu_bar text-end">
+                            <a class="btn header_toggle_btn" data-bs-toggle="offcanvas" href="#offcanvasExample"
+                                role="button" aria-controls="offcanvasExample">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+  
+
+
+    <!-- moblie menu  start-->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample">
+
+      <div class="offcanvas-body light_dark_bg">
+          <div class="mobile-menu">
+              <a href="index-2.html" class="logo py-3"><img src="{{logoimg.logo}}" alt="logo"
+                      class="img-fluid"></a>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+
+              <!-- accordion start -->
+              <ul class="accordion mobile_dropdown" id="accordionExample">
+                  <li class="accordion-item">
+                      <h2><a href="/">Home</a></h2>
+                  </li>
+                  <li class="accordion-item">
+                    <h2><a href="about-us">About</a></h2>
+                </li>
+                <li class="accordion-item">
+                  <h2><a href="crud-operations">Crud Operations
+                  </a></h2>
+              </li>
+              <li class="accordion-item">
+                <h2><a href="portfolio">Portfolio</a></h2>
+            </li>
+            <li class="accordion-item">
+              <h2><a href="blog">blog</a></h2>
+          </li>
+                  <!-- <li class="accordion-item">
+                      <h2 id="headingTwo">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                              data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                              Service
+                          </button>
+                      </h2>
+                      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                          data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                              <ul>
+                                  <li><a href="service.html">service All</a></li>
+                                  <li><a href="service-details.html">service Details</a></li>
+                              </ul>
+                          </div>
+                      </div>
+                  </li> -->
+                  
+                  <li class="accordion-item">
+                      <h2><a href="contact">Contact</a></h2>
+                  </li>
+              </ul>
+              <!-- accordion end -->
+          </div>
+      </div>
+  </div>
+  <!-- mobile menu end -->
+
+  <!-- right offcanvas start -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+      <div class="offcanvas-header align-items-center">
+          <a href="index-2.html" class="d-inline-block"><img src="../static/assets/images/log.png" alt="logo"></a>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+          <h4 class="mb-3 fb ldark">About Us</h4>
+          <p class="dark">
+            Welcome to my portfolio! I'm Tarun Kumar, a dedicated web designer and WordPress developer with a passion for crafting beautiful and functional websites. With a background in both design and development, I bring a unique blend of creativity and technical expertise to every project I undertake.My journey in the world of web design began with a fascination for the art of visual communication and a desire to create meaningful online experiences
+
+            
+            
+         
+          </p>
+          
+          <a href="about-us" class="default-btn my-4 px-5 py-3 rounded-2">About Us <span></span> </a>
+
+          <h5 class="mb-3 fsb">Contact Info</h5>
+          <address>
+              dwarka modr , New Delhi <br>
+              <a href="tell:77800006656" class="muddy mt-3 d-block">
+                  Call me  :- (+778) 000-0665
+              </a>
+              <a href="mailto:ak3400988@gmail.com" class="muddy d-block">
+                 Gmail :- ak3400988@gmail.com
+              </a>
+          </address>
+          <ul class="ht_social d-flex flex-wrap gap-2">
+              <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+              <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+              <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+          </ul>
+      </div>
+  </div>
+  <!-- right offcanvas end -->

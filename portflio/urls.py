@@ -21,13 +21,13 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('tarun/admin/', admin.site.urls),
     path('', views.homepage),
     path('about-us', views.aboutpage),
     path('crud-operations', views.crudoperations),
     path('contact', views.contactpage),
     path('blog', views.blog),
     path('', views.pagenotfound),
-    path('allmyprojectdetails/<id>', views.projectdetail)
+    path('allmyprojectdetails/<int:id>', views.projectdetail)
     
-]  + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+]  + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

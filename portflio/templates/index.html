@@ -20,7 +20,7 @@
                         <div class="hire_downlaod d-flex align-items-center gap-4 gap-md-5 flex-wrap">
                             <a href="#" class="white fsb" data-toggle="modal" data-target="#exampleModalCenter"><span><i class="fa-solid fa-angle-right"></i></span>Hire
                                 me</a>
-                            <a href="{{slider.pdf}}" class="default-btn1" download="">Download CV <i class="fa-solid fa-arrow-up-long"></i>
+                            <a href="{{slider.pdf.url}}" class="default-btn1" download="">Download CV <i class="fa-solid fa-arrow-up-long"></i>
                                 <span></span>
                             </a>
                         </div>
@@ -43,7 +43,7 @@
                 </div>
                 <div class="col-xl-6 col-lg-6 col-12">
                     <div class="banner_right text-center position-relative">
-                        <img src="{{slider.image}}" alt="reload">
+                        <img src="{{slider.image.url}}" alt="reload">
 
                         <div class="signal1 position-relative position-absolute ">
                             <span class="round"></span>
@@ -155,7 +155,7 @@
             <div class="container">
                 <div class="row  mb-5">
                     <div class=" col-12">
-                        <div class="common_heading text-center">
+                        <div class="common_heading text-center" >
                           
                             <h3 class="f-52 fb dark"><span class="italic orange">---</span>&nbsp;My Project&nbsp;<span class="italic orange">---</span></h3>
                         </div>
@@ -167,10 +167,10 @@
                     
                     
                     <div class="col-xl-4 col-lg-4 col-md-4 col-12 mb-4 mb-md-5 ">
-                        <a href="/allmyprojectdetails/{{d_myproject.id}}">
+                        <a href="allmyprojectdetails/{{d_myproject.id}}" >
                             <div class="portfolio_item">
                                 <div class="por_img rounded-4  mb-4 img position-relative">
-                                    <img src="{{d_myproject.project_image}}" alt="">
+                                    <img src="{{d_myproject.project_image.url}}" alt="">
                                     <span class="position-absolute white_bg center dark"><i
                                             class="fa-solid fa-arrow-up-long"></i></span>
                                 </div>

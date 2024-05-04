@@ -1,5 +1,7 @@
 # Create your models here.
 from django.db import models
+from django.utils.html import format_html
+
 
 # Create your models here.
 
@@ -16,19 +18,13 @@ class slider (models.Model):
   
 
   def __str__(self):
-      return self.title
+    return self.title
+  def image_tag(self):
+    return format_html('<img src="/Media_upload/{}"  style="width: 60px; height: 100px;border: 4px solid red;" />'.format(self.image))
   
   
 #  logo titile top logo 
 
-class logoimg (models.Model):
-  title =models.CharField(max_length=100 ,blank=False)
-  logo =models.ImageField(upload_to='logo',blank=False)
-  toplogo =models.ImageField(upload_to='logo',blank=False)
-
-
-  def __str__(self):
-      return self.title
   
 
   # my project 
@@ -36,10 +32,15 @@ class logoimg (models.Model):
 class myproject (models.Model):
   description_title =models.CharField(max_length=100 ,blank=False)
   title =models.CharField(max_length=100 ,blank=False)
+  add_date=models.DateTimeField(null=True,auto_now_add=True)
   project_image =models.ImageField(upload_to='project_image',blank=False)
+  # urlLink =models.URLField(blank=False ,null=True)
 
   def __str__(self):
     return self.title
+  def image_tag(self):
+    return format_html('<img src="/Media_upload/{}"  style="width: 60px; height: 50px;border: 4px solid red;" />'.format(self.project_image))
+
   
 
 
@@ -48,6 +49,11 @@ class projectdetails (models.Model):
   post_title =models.CharField(max_length=100 ,blank=False)
   description =models.TextField(max_length=1000 ,blank=False)
   project_image =models.ImageField(upload_to='projectdetails',blank=False)
+  add_date=models.DateTimeField(auto_now_add=True,null=True)
+
+
+  def image_tag(self):
+    return format_html('<img src="/Media_upload/{}"  style="width: 60px; height: 50px;border: 4px solid red;" />'.format(self.project_image))
 
   def __str__(self):
     return self.post_title   

@@ -2,7 +2,6 @@ from django.http import HttpResponse
 from django.shortcuts import render
 # from models import slider
 from service.models import  slider 
-from service.models import logoimg
 from service.models import myproject
 from service.models import projectdetails
 
@@ -12,11 +11,11 @@ from service.models import projectdetails
 
 def homepage (request):
   sliderdata=slider.objects.all()[0]
-  logodata=logoimg.objects.all()[0]
+  # logodata=logoimg.objects.all()[0]
   myprojectdata=myproject.objects.all()
   context ={
     'slider':sliderdata,
-    'logoimg':logodata,
+    # 'logoimg':logodata,
     'myproject':myprojectdata,
   }
   # return HttpResponse ("Hello world")
@@ -25,54 +24,41 @@ def homepage (request):
 
 def aboutpage(request):
   # return HttpResponse ("About page")
-  logodata=logoimg.objects.all()[0]
-  context={
-    'logoimg':logodata
-  }
-  return render(request,'about.html' ,context)
+
+  return render(request,'about.html' )
 
 def crudoperations(request):
-  logodata=logoimg.objects.all()[0]
-  context={
-    'logoimg':logodata
-  }
-  return render(request,'crudcrudoperations.html',context)
+
+  
+  return render(request,'crudcrudoperations.html')
  
 
 
 
 def blog(request):
-  logodata=logoimg.objects.all()[0]
-  context={
-    'logoimg':logodata
-  }
-  return render(request,'blog.html',context)
+
+ 
+  return render(request,'blog.html')
   
 
 
 def contactpage(request):
-  logodata=logoimg.objects.all()[0]
-  context={
-    'logoimg':logodata
-  }
-  return render(request,'contact.html',context)
+
+ 
+  return render(request,'contact.html')
   
 
 
 def pagenotfound(request):
-  logodata=logoimg.objects.all()[0]
-  context={
-    'logoimg':logodata
-  }
-  return render(request,'pagenotfound.html',context)
+
+
+  return render(request,'pagenotfound.html')
 
 
 def projectdetail(request,id):
-  logodata=projectdetails.objects.all()[0]
   details=projectdetails.objects.filter(id=id)
   
   context={
-    'logoimg':logodata,
     'projectdetails':details
     
    

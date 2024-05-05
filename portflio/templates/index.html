@@ -92,7 +92,8 @@
           </button>
         </div>
         <div class="container">
-            <form >
+            <form action="" method="POST">
+                {% csrf_token %}
             <div class="row" >
                  
                <div class="col-md-12">
@@ -100,12 +101,12 @@
                     <div style="display: flex;height: 50px;">
                         <div class="col-md-6">
                             <div class="col from_margin">
-                                <input type="text" class="form-control" placeholder="First name" required>
+                                <input type="text" class="form-control"name="full_name"  placeholder="Full name" >
                               </div>
                         </div>
                         <div class="col-md-6">
                             <div class="col from_margin">
-                                <input type="email" class="form-control" placeholder="Email"required>
+                                <input type="email" class="form-control" name="email" placeholder="Email">
                               </div>
                         </div>
                     </div>
@@ -117,13 +118,13 @@
                      <div >
                          <div class="col-md-12">
                              <div class="col from_margin" >
-                                 <input type="number" class="form-control" placeholder="Number"required>
+                                 <input type="number" class="form-control" name="number" placeholder="Number">
                                </div>
                          </div>
                          <div class="col-md-12">
                              <div class="col from_margin" >
-                                <textarea class="form-control" placeholder="Message"
-                                required></textarea>
+                                <textarea class="form-control" name="message" placeholder="Message"
+                                ></textarea>
                                </div>
                          </div>
                      </div>
@@ -773,56 +774,7 @@
       
 
 
-        <!-- get in touch -->
-        <section class="ptb-110 m-17 dark_bg">
-            <div class="container">
-                <div class="row mb-5 justify-content-center">
-                    <div class="col-lg-8 col-md-10 col-12">
-                        <div class="common_heading text-center">
-                            <h6 class="muddy fsb text-uppercase mb-3">Get in touch</h6>
-                            <h3 class="f-52 fb white">Want To <span class="italic orange">Enrich</span> Yourself, Always
-                                Connect With Us
-                            </h3>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="contact_box get_bg  rounded-3">
-                    <div class="row">
-                        <div class="col-xl-6 col-lg-6 col-12 mb-4 mb-lg-0">
-                            <h4 class="white fb mb-4">Tell us about yourself</h4>
-                            <form>
-                                <div class="row">
-                                    <div class="col-md-6 col-12 mb-4">
-                                        <input type="text" placeholder="Name" class="text dark_bg w-100">
-                                    </div>
-                                    <div class="col-md-6 col-12 mb-4">
-                                        <input type="email" placeholder="Email" class="text dark_bg w-100">
-                                    </div>
-                                    <div class="col-12 mb-4">
-                                        <input type="text" placeholder="Subject" class="text dark_bg w-100">
-                                    </div>
-                                    <div class="col-12">
-                                        <textarea style="resize: none;" cols="20" rows="6"
-                                            class="w-100 dark_bg">Message</textarea>
-                                    </div>
-                                </div>
-                                <button type="submit" class="default-btn1 mt-4">Send Message <i
-                                        class="fa-solid fa-arrow-up-long"></i>
-                                    <span></span></button>
-                            </form>
-                        </div>
-                        <div class="col-xl-6 col-lg-6 col-12">
-                            <div class="get_img text-center">
-                                <img src="../static/assets/images/banner/b2.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-        <!-- get in touch -->
+    
     </main>
 
     {% endblock 'content' %}

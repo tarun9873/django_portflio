@@ -5,8 +5,14 @@ from django.utils.html import format_html
 
 # Create your models here.
 
+class hear_me(models.Model):
+  full_name=models.CharField(max_length=100)
+  email=models.EmailField(max_length=100)
+  number=models.CharField(max_length=20)
+  message=models.TextField(max_length=100)
 
-
+  def __str__(self):
+        return self.full_name
 
 class slider (models.Model):
   title =models.CharField(max_length=100 ,blank=False)
@@ -50,6 +56,7 @@ class projectdetails (models.Model):
   description =models.TextField(max_length=1000 ,blank=False)
   project_image =models.ImageField(upload_to='projectdetails',blank=False)
   add_date=models.DateTimeField(auto_now_add=True,null=True)
+  Url_add=models.URLField(null=True, blank=True)
 
 
   def image_tag(self):

@@ -10,9 +10,23 @@ class hear_me(models.Model):
   email=models.EmailField(max_length=100)
   number=models.CharField(max_length=20)
   message=models.TextField(max_length=100)
+  add_date=models.DateTimeField(null=True,auto_now_add=True)
 
   def __str__(self):
         return self.full_name
+  
+
+
+
+class contact(models.Model):
+  full_name=models.CharField(max_length=100)
+  email=models.EmailField(max_length=100)
+  number=models.CharField(max_length=20)
+  msg=models.TextField(max_length=100)
+  add_date=models.DateTimeField(null=True,auto_now_add=True)
+
+  def __str__(self):
+        return self.full_name  
 
 class slider (models.Model):
   title =models.CharField(max_length=100 ,blank=False)

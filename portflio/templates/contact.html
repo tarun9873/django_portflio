@@ -11,4 +11,82 @@
 </div>
 </header>
 
+
+
+<!-- get in touch -->
+<section class="ptb-110 m-17 gray_bg">
+  <div class="container">
+      <div class="row pb-110 justify-content-center">
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-4 mb-xxl-0 mb-xl-0 ">
+              <div class="f_contact b">
+                  <p>Whatsapp</p>
+                  <a href="tell:8527321599">
+                      <h6> 8527321599</h6>
+                  </a>
+              </div>
+          </div>
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-4 mb-xxl-0 mb-xl-0 ">
+              <div class="f_contact b">
+                  <p>Email</p>
+                  <a href="mailto:ak3400988@gmail.com">
+                      <h6>ak3400988@gmail.com</h6>
+                  </a>
+              </div>
+          </div>
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-4 mb-xxl-0 mb-xl-0 ">
+              <div class="f_contact b">
+                  <p>Address</p>
+                  <h6 class="white">Dwarka mor, New Delhi</h6>
+              </div>
+          </div>
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+              <div class="f_contact b">
+                  <p>Follow</p>
+                  <ul class="d-flex">
+                      <li><a href="javascript:viod(0)"><i class="fa-brands fa-facebook-f"></i></a></li>
+                      <li><a href="javascript:viod(0)"><i class="fa-brands fa-twitter"></i></a></li>
+                      <li><a href="javascript:viod(0)"><i class="fa-brands fa-instagram"></i></a></li>
+
+                  </ul>
+              </div>
+          </div>
+      </div>
+
+      <div class="contact_box get_bgg  rounded-3">
+          <div class="row">
+              <div class="col-xl-6 col-lg-6 col-12 mb-4 mb-lg-0">
+                  <h4 class="white fb mb-4">Tell us about yourself</h4>
+                  <form method="POST" action=""> 
+                    {% csrf_token %}
+                      <div class="row">
+                          <div class="col-md-6 col-12 mb-4">
+                              <input type="text" placeholder="Name" name="full_name" class="text dark_bg w-100">
+                          </div>
+                          <div class="col-md-6 col-12 mb-4">
+                              <input type="email" placeholder="Email" name="email" class="text dark_bg w-100">
+                          </div>
+                          <div class="col-12 mb-4">
+                              <input type="number" placeholder="Number"  name="number" class="text dark_bg w-100">
+                          </div>
+                          <div class="col-12">
+                              <textarea style="resize: none;" name="msg" cols="20" rows="6"
+                                  class="w-100 dark_bg text" placeholder="Message"></textarea>
+                          </div>
+                      </div>
+                      <button type="submit" class="default-btn1 mt-4">Send Message <i
+                              class="fa-solid fa-arrow-up-long"></i>
+                          <span></span></button>
+                  </form>
+              </div>
+              <div class="col-xl-6 col-lg-6 col-12">
+                  <div class="get_img text-center">
+                      <img src="../static/assets/images/banner/1.png" alt="">
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+</section>
+<!-- get in touch -->
 {% endblock 'content' %}

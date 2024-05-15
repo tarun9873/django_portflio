@@ -5,6 +5,7 @@ from service.models import  slider
 from service.models import myproject
 from service.models import projectdetails
 from service.models import hear_me
+from service.models import contact
 
 
 # from
@@ -49,7 +50,16 @@ def blog(request):
 
 
 def contactpage(request):
-  return render(request,'contact.html')
+   
+    if request.method=="POST":
+      name=request.POST['full_name']
+      email=request.POST['email']
+      number=request.POST['number']
+      message=request.POST['msg']
+      
+      data=contact(full_name=name,email=email,number=number,msg=message)
+      data.save()
+    return render(request,'contact.html')
   
 
 

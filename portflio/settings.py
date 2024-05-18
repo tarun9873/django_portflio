@@ -12,26 +12,24 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 import os
-import dj_database_url
 
-from dotenv import load_dotenv
+
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-load_dotenv(os.path.join(BASE_DIR/".eVar","env"))
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = 'django-insecure-@3&ah^191vto)&fal5fv!*$nu#bzff(w^s(22v9nj)a8_-!b!q'
-SECRET_KEY =os.environ.get("SECRET_KEY")
-# SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True
-DEBUG = os.environ.get("DEBUG")
+SECRET_KEY = 'django-insecure-@3&ah^191vto)&fal5fv!*$nu#bzff(w^s(22v9nj)a8_-!b!q'
 
-ALLOWED_HOSTS = ["127.0.0.1","localhost"]
-ALLOWED_HOSTS +=os.environ.get("ALLOWED_HOSTS").split()
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = True
+
+ALLOWED_HOSTS = []
+
 
 # Application definition
 
@@ -81,26 +79,12 @@ WSGI_APPLICATION = 'portflio.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-DATABASES ={
-  'default':dj_database_url.config(
-    default="splite:///"+os.path(BASE_DIR,"db.sqlite3")
-  )
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 }
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         # 'NAME': BASE_DIR / 'db.sqlite3',
-#         'NAME' :'portflio' ,
-#         'USER' :'root' ,
-#         'PASSWORD' :'' ,
-#         'HOST' :'127.0.0.1' ,
-#         'POST' :'3306' ,
-#         'OPTIONS' :{
-#           'init_command':"SET sql_mode='STRICT_TRANS_TABLES'"
-#         }
-#     }
-# }
 
 
 # Password validation
